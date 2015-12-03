@@ -1,0 +1,16 @@
+Ais\ProvinsiBundle\Entity\Provinsi:
+ type: entity
+ table: provinsi
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  nama:
+   type: string
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true

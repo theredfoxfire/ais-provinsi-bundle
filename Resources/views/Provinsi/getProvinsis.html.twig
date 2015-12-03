@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'provinsi.list'|trans({}, 'AisProvinsiBundle') }}</h1>
+
+    <ul id="provinsi-list">
+        {% for provinsi in provinsis %}
+            <li>
+                <a href="{{ path('api_1_get_provinsi', {'id': provinsi.id}) }}">{{ provinsi.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_provinsis', {'id': provinsi.id}) }}">{{ 'provinsi.edit.link'|trans({}, 'AisProvinsiBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_provinsis', {'id': provinsi.id}) }}">{{ 'provinsi.remove.link'|trans({}, 'AisProvinsiBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'provinsi.list.empty'|trans({}, 'AisProvinsiBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_provinsi') }}">{{ 'provinsi.new.link'|trans({}, 'AisProvinsiBundle') }}</a>
+    </p>
+{% endblock %}
