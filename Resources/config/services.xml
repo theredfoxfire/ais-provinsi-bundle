@@ -16,6 +16,16 @@
             <argument>%ais_provinsi.provinsi.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        
+        <service id="ais_provinsi.provinsi.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_provinsi.provinsi.class%</argument>
+		</service>
+        
+        <service id="ais_provinsi.provinsi.repository" 
+			class="Ais\UserBundle\Repository\ProvinsiRepository"
+			factory-service="ais_user.provinsi.manager" factory-method="getRepository">
+				<argument>%ais_provinsi.provinsi.class%</argument>
+		</service>
     </services>
 
 </container>

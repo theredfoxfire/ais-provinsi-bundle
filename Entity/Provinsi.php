@@ -113,4 +113,3 @@ class Provinsi implements ProvinsiInterface
         return $this->is_delete;
     }
 }
-

@@ -1,6 +1,7 @@
 Ais\ProvinsiBundle\Entity\Provinsi:
  type: entity
  table: provinsi
+ repositoryClass: Ais\ProvinsiBundle\Repository\ProvinsiRepository
  id:
   id: 
    type: integer
