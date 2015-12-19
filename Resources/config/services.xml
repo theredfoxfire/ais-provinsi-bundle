@@ -22,8 +22,8 @@
 		</service>
         
         <service id="ais_provinsi.provinsi.repository" 
-			class="Ais\UserBundle\Repository\ProvinsiRepository"
-			factory-service="ais_user.provinsi.manager" factory-method="getRepository">
+			class="Ais\ProvinsiBundle\Repository\ProvinsiRepository"
+			factory-service="ais_provinsi.provinsi.manager" factory-method="getRepository">
 				<argument>%ais_provinsi.provinsi.class%</argument>
 		</service>
     </services>
